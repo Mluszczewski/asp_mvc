@@ -1,0 +1,18 @@
+﻿@using tech_dot_net_Mluszczewski.Models
+@{
+    ViewData["Title"] = "About";
+    WebsiteContext webContext = new WebsiteContext {
+                                    Version = new Version(1, 0),
+                                    CopyrightYear = 2020,
+                                    Approved = true, };
+}
+<h2>@ViewData["Title"].</h2>
+<h3>Website description page</h3>
+
+<p bold>Here some information about library website</p>
+
+<website-information info="webContext" />
+
+<div>
+    <a asp-action="Index">Back to HomePage</a>
+</div>
